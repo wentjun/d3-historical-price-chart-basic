@@ -6,6 +6,6 @@
 
 2.  `npm i`
 
-3.  `http-server src`
+3.  `http-server docs`
 
 Main repository: https://github.com/wentjun/d3-historical-prices
