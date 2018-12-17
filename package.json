@@ -1,0 +1,16 @@
+{
+  "name": "d3-historical-price-chart-basic",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wen Tjun",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.1.6",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
