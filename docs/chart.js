@@ -50,6 +50,8 @@ const initialiseChart = data => {
   const width = window.innerWidth - margin.left - margin.right; // Use the window's width
   const height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
 
+  console.log(width);
+  console.log(height);
   // find data range
   const xMin = d3.min(data, d => {
     return d['date'];
@@ -82,8 +84,9 @@ const initialiseChart = data => {
   const svg = d3
     .select('#chart')
     .append('svg')
-    .attr('viewBox', '0 0 1150 700')
-    .attr('preserveAspectRatio', 'xMinYMin meet')
+    .attr('width', width + margin['left'] + margin['right'])
+    .attr('height', height + margin['top'] + margin['bottom'])
+    .call(responsivefy)
     .append('g')
     .attr('transform', `translate(${margin['left']}, ${margin['top']})`);
 
