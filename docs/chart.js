@@ -66,7 +66,7 @@ const initialiseChart = data => {
     row => row['high'] && row['low'] && row['close'] && row['open']
   );
 
-  thisYearStartDate = new Date(new Date().getFullYear(), 0, 1);
+  thisYearStartDate = new Date(2018, 0, 1);
 
   // filter out data based on time period
   data = data.filter(row => {
@@ -79,8 +79,6 @@ const initialiseChart = data => {
   const width = window.innerWidth - margin.left - margin.right; // Use the window's width
   const height = window.innerHeight - margin.top - margin.bottom; // Use the window's height
 
-  console.log(width);
-  console.log(height);
   // find data range
   const xMin = d3.min(data, d => {
     return d['date'];
