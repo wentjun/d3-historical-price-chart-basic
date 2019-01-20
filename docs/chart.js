@@ -104,7 +104,7 @@ const initialiseChart = data => {
 
   const yScale = d3
     .scaleLinear()
-    .domain([yMin - 0.1, yMax])
+    .domain([yMin - 5, yMax])
     .range([height, 0]);
 
   // add chart SVG to the page
@@ -158,6 +158,7 @@ const initialiseChart = data => {
     .style('fill', 'none')
     .attr('id', 'priceChart')
     .attr('stroke', 'steelblue')
+    .attr('stroke-width', '1.5')
     .attr('d', line);
 
   // calculates simple moving average over 50 days
@@ -283,7 +284,7 @@ const initialiseChart = data => {
   const yVolumeScale = d3
     .scaleLinear()
     .domain([yMinVolume, yMaxVolume])
-    .range([height, 0]);
+    .range([height, height * (3 / 4)]);
 
   svg
     .selectAll()
